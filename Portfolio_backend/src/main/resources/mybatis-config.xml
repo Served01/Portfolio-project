@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!-- 타입 별칭 설정 -->
+    <typeAliases>
+        <package name="com.portfolio.backend.dto"/>
+    </typeAliases>
+    
+    <!-- 설정 -->
+    <settings>
+        <!-- 언더스코어를 카멜케이스로 자동 변환 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 기본 페치 사이즈 -->
+        <setting name="defaultFetchSize" value="100"/>
+        <!-- 기본 스테이트먼트 타임아웃 -->
+        <setting name="defaultStatementTimeout" value="30"/>
+        <!-- 지연 로딩 활성화 -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!-- 지연 로딩 시 null 객체 반환 -->
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!-- 캐시 활성화 -->
+        <setting name="cacheEnabled" value="true"/>
+        <!-- JDBC 타입을 NULL로 설정 -->
+        <setting name="jdbcTypeForNull" value="NULL"/>
+    </settings>
+    
+    <!-- 매퍼 파일 위치 설정 -->
+    <mappers>
+        <mapper resource="mapper/UserMapper.xml"/>
+    </mappers>
+</configuration>
